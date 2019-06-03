@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <section class="screen" onclick="toggleMenu()"></section>
+    <div class="container-navbar">
+        <section class="main-navbar flex container space-between align-center">
+            <div class="logo">Blogin<span class="point">.</span></div>
+            <nav class="main-nav">
+                <ul class="flex clean-list">
+                    <li><a class="flex align-center justify-center" href="">Journal</a></li>
+                    <li><a class="flex align-center justify-center" href="">About</a></li>
+                    <li><a class="flex align-center justify-center" href="">Work</a></li>
+                    <li><a class="flex align-center justify-center" href="">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </section>
+    </div>
+
+    <main class="posts-container flex column container">
+        <section class="post flex">
+            <img src="img/Slice_0.png" alt="">
+            <div class="post-text flex column">
+                <h2>Duis aute irure dolor in henderit in voluptate</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                    dicta pariatur? Suscipit asperiores accusamus iusto autem,
+                    porro animi minima sapiente magnam.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                    dicta pariatur? Suscipit asperiores accusamus iusto autem,
+                </p>
+                <button><span class="continue-reading">Continue R</span>eading</button>
+            </div>
+        </section>
+        <section class="post flex">
+            <img src="img/Slice_1.png" alt="">
+            <div class="post-text flex column">
+                <h2>Duis aute irure dolor in henderit in voluptate</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                    dicta pariatur? Suscipit asperiores accusamus iusto autem,
+                    porro animi minima sapiente magnam.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                    dicta pariatur? Suscipit asperiores accusamus iusto autem,
+                </p>
+                <button><span class="continue-reading">Continue R</span>eading</button>
+            </div>
+        </section>
+        <section class="post flex">
+            <img src="img/Slice_2.png" alt="">
+            <div class="post-text flex column">
+                <h2>Duis aute irure dolor in henderit in voluptate</h2>
+                <p>Ut ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                    dicta pariatur? Suscipit asperiores accusamus iusto autem,
+                    porro animi minima sapiente magnam.
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                    dicta pariatur? Suscipit asperiores accusamus iusto autem,
+                </p>
+                <button><span class="continue-reading">Continue R</span>eading</button>
+            </div>
+        </section>
+        <section class="prev-next-btns flex space-between">
+            <button class="prev-btn">Previous</button>
+            <button class="next-btn">Next</button>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-logo">Blogin<span class="point">.</span></p>
+        <p class="blogin-rights">© 2014 Blogin.com - All Rights Reserved - Find more free Templates at <span
+                class="pixelhint-com">Pixelhint.com</span></p>
+        <div class="links">
+            <span><img class="f" src="img/F.png"></span>
+            <span><img class="l" src="img/L.png"></span>
+            <span><img class="e" src="img/E.png"></span>
+            <span><img class="d" src="img/D.png"></span>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('open-menu');
+        }
+    </script>
+</body>
+
+</html>
