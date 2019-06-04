@@ -28,10 +28,12 @@ a{
   letter-spacing: 0.8px;
   color: #ffffff;
   border-left: 0.062rem black solid;
+  cursor: pointer;
 }
 a:hover{
     box-shadow: -1px 0 0 #1d1d1d, inset 0 -6px 0 #58c93a;
     color: #58c93a;
+    transition-duration: 0.4s;
 }
 h2{
     font-size: 1.75rem;
@@ -66,6 +68,36 @@ h2{
 }
 .menu-btn {
     display: none;
+    margin-right: 5px;
+    background-color: rgb(235, 232, 232);
+    color: black;
+    border: 1px #1c1b1b solid;
+    border-radius: 5px;
+}
+
+.contain-drop:hover .dropdown{display: block;}
+.dropdown {
+    display: none;
+    /* overflow: inherit; */
+    background-color: #292929;
+    width: 132px;
+    position: fixed;
+    top: 131px;
+}
+.contain-drop ul{
+    opacity: 0.9;
+}
+.dropdown li{
+    height: 50px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.dropdown li:hover{
+    box-shadow: -1px 0 0 #1d1d1d, inset 0 -6px 0 #58c93a;
+    color: #58c93a;
+    transition-duration: 0.4s;
 }
 
 /* posts-container */
@@ -122,8 +154,8 @@ h2{
     border: 2px solid #58c93a;
 }
 .post-text button:hover::after{
-    content: '→';
     position: absolute;
+    content: '→';
     right: 21px;
 }
 .continue-reading{
@@ -239,7 +271,6 @@ footer .links span .d {
 }
 
 /* list */
-
 .clean-list {
     margin: 0;
     padding: 0;
@@ -247,21 +278,17 @@ footer .links span .d {
 }
 
 /* container */
-
 .container {
     max-width: 980px;
     margin: 0 auto;
 }
 
+/* /////////////////////////////////////////////////////////// */
 
-/* modal */
-
+/* side-menu */
 body.open-menu .main-nav { 
-    /* display: block; */
     transition-duration: 0.5s;
     transform: translate(-4%, 0);
-
-
 }
 
 /* Screens */
@@ -281,6 +308,45 @@ body.open-menu .screen {
     display: block;
 }
 
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* left: 0; */
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 @media (max-width: 957px) {
     .main-navbar {
         max-width: 640px;
@@ -288,6 +354,10 @@ body.open-menu .screen {
     a{
         width: 101px;
         height: 100px;
+    }
+    .dropdown{
+        top: 100px;
+        width: 102px;
     }
     .posts-container{
         max-width:640px; ;
@@ -313,11 +383,7 @@ body.open-menu .screen {
     }
     .menu-btn {
         display: block;
-        margin-right: 5px;
-        background-color: rgb(235, 232, 232);
-        color: black;
-        border: 1px #1c1b1b solid;
-        border-radius: 5px;
+        
     }
     .menu-btn:active{
         border: 3px #1c1b1b solid;
@@ -349,6 +415,9 @@ body.open-menu .screen {
         color: black;
         text-shadow: 0 0 9px black;
     }
+    .dropdown {
+        display: none;
+    }
     .posts-container{
         max-width:550px; ;
     }
@@ -365,6 +434,9 @@ body.open-menu .screen {
     .main-navbar {
         max-width: 400px;
     }
+    .dropdown {
+        display: none;
+    }
     .posts-container{
         max-width:400px; ;
     }
@@ -380,6 +452,9 @@ body.open-menu .screen {
 @media (max-width: 400px) {
     .main-navbar {
         max-width: 330px;
+    }
+    .dropdown {
+        display: none;
     }
     .posts-container{
         padding-top: 3rem;

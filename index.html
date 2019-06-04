@@ -10,16 +10,24 @@
 </head>
 
 <body>
+
     <section class="screen" onclick="toggleMenu()"></section>
+
     <div class="container-navbar">
         <section class="main-navbar flex container space-between align-center">
             <div class="logo">Blogin<span class="point">.</span></div>
             <nav class="main-nav">
                 <ul class="flex clean-list">
-                    <li><a class="flex align-center justify-center" href="">Journal</a></li>
-                    <li><a class="flex align-center justify-center" href="">About</a></li>
-                    <li><a class="flex align-center justify-center" href="">Work</a></li>
-                    <li><a class="flex align-center justify-center" href="">Contact</a></li>
+                    <li class="contain-drop"><a class="flex align-center justify-center">Journal</a>
+                        <ul class="dropdown column clean-list">
+                            <li class="flex align-center justify-center">2019</li>
+                            <li class="flex align-center justify-center">2019</li>
+                            <li class="flex align-center justify-center">2019</li>
+                        </ul>
+                    </li>
+                    <li><a class="flex align-center justify-center">About</a></li>
+                    <li><a class="flex align-center justify-center">Work</a></li>
+                    <li><a class="flex align-center justify-center">Contact</a></li>
                 </ul>
             </nav>
             <button class="menu-btn" onclick="toggleMenu()">☰</button>
@@ -38,7 +46,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
                     dicta pariatur? Suscipit asperiores accusamus iusto autem,
                 </p>
-                <button><span class="continue-reading">Continue R</span>eading</button>
+                <button onclick="onShowModal()"><span class="continue-reading">Continue R</span>eading</button>
             </div>
         </section>
         <section class="post flex">
@@ -52,7 +60,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
                     dicta pariatur? Suscipit asperiores accusamus iusto autem,
                 </p>
-                <button><span class="continue-reading">Continue R</span>eading</button>
+                <button onclick="onShowModal()"><span class="continue-reading">Continue R</span>eading</button>
             </div>
         </section>
         <section class="post flex">
@@ -66,7 +74,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
                     dicta pariatur? Suscipit asperiores accusamus iusto autem,
                 </p>
-                <button><span class="continue-reading">Continue R</span>eading</button>
+                <button onclick="onShowModal()"><span class="continue-reading">Continue R</span>eading</button>
             </div>
         </section>
         <section class="prev-next-btns flex space-between">
@@ -87,9 +95,27 @@
         </div>
     </footer>
 
+    <!-- The Modal -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+    </div>
+
+
+
+
     <script>
         function toggleMenu() {
             document.body.classList.toggle('open-menu');
+        }
+
+        function onShowModal(){
+            document.querySelector('.modal').style.display = "block";
+            document.querySelector('.close').onclick = function(){
+                document.querySelector('.modal').style.display = "none";
+            }
         }
     </script>
 </body>
